@@ -79,7 +79,7 @@ class ModmailBot(commands.Bot):
         if not self.config["enable_presence_intent"]:
             intents.presences = False
 
-        super().__init__(command_prefix=None, intents=intents)  # implemented in `get_prefix`
+        super().__init__(command_prefix="=", intents=intents)  # implemented in `get_prefix`
         self.session = None
         self._api = None
         self.formatter = SafeFormatter()
